@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "505201857409",
+    "project_id": "rockwin-578b5",
+    "storage_bucket": "rockwin-578b5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:505201857409:android:86792d326f402835680e80",
+        "android_client_info": {
+          "package_name": "es.ucm.fdi.rockwin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "505201857409-19s7lm422nmkq3t5q4afhps0mdv3eahm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "es.ucm.fdi.rockwin",
+            "certificate_hash": "7373304cc783e40a3966497299b016a7cc701b79"
+          }
+        },
+        {
+          "client_id": "505201857409-50h7hfcvpafthjsbjllbkcrtc2utbeul.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUHU58-6tfu2ASjCxOy3UhBLjtNY3DndU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "505201857409-50h7hfcvpafthjsbjllbkcrtc2utbeul.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
