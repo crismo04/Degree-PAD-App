@@ -66,13 +66,14 @@ public class MainActivity extends AppCompatActivity {
                 correo = etCorreo.getText().toString();
                 contraseña = etContraseña.getText().toString();
 
-
                 if(!correo.isEmpty()&& !contraseña.isEmpty()){
                     mAuth.createUserWithEmailAndPassword(correo,contraseña).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull  Task<AuthResult> task) {
                             if(task.isSuccessful()){
                                 mostrarPerfil(correo);
+                            }else if (contraseña.length() < 9 ){
+                                    Toast.makeText(MainActivity.this, "la contraseña debe ser mayor a 9 caracteres", Toast.LENGTH_SHORT).show();
                             }else
                                 Toast.makeText(MainActivity.this, "Email Incorrecto", Toast.LENGTH_SHORT).show();
 
@@ -90,22 +91,20 @@ public class MainActivity extends AppCompatActivity {
 
                 correo = etCorreo.getText().toString();
                 contraseña = etContraseña.getText().toString();
-
-
-                if(!correo.isEmpty()&& !contraseña.isEmpty()){
-                    mAuth.signInWithEmailAndPassword(correo,contraseña).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                if (!correo.isEmpty() && !contraseña.isEmpty()) {
+                    mAuth.signInWithEmailAndPassword(correo, contraseña).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
-                        public void onComplete(@NonNull  Task<AuthResult> task) {
-                            if(task.isSuccessful()){
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
                                 mostrarPerfil(correo);
-                            }else
-                                Toast.makeText(MainActivity.this, "Email Incorrecto", Toast.LENGTH_SHORT).show();
-
+                            }
+                            else {
+                                Toast.makeText(MainActivity.this, "Email o contraseña Incorrectos", Toast.LENGTH_SHORT).show();
+                            }
                         }
                     });
-                }else
+                } else
                     Toast.makeText(MainActivity.this, "Debe rellenar los campos", Toast.LENGTH_SHORT).show();
-
             }
         });
 
